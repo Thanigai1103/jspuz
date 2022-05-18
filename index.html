@@ -1,27 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>🧠 Memory Game in JavaScript</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-        <link rel="stylesheet" href="assets/styles.css" />
-        <script src="assets/game.js" defer></script>
-    </head>
-    <body>
-        <div class="game">
-            <div class="controls">
-                <button>Start</button>
-                <div class="stats">
-                    <div class="moves">0 moves</div>
-                    <div class="timer">time: 0 sec</div>
-                </div>
-            </div>
-            <div class="board-container">
-                <div class="board" data-dimension="4"></div>
-                <div class="win">You won!</div>
-            </div>
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i id="star1" class="fa fa-star star"></i></li>
+        		<li><i id="star2" class="fa fa-star star"></i></li>
+        		<li><i id="star3" class="fa fa-star star"></i></li>
+        	</ul>
+
+          <div id="timeElapsed" class="timeElapsed">
+          <span id="secondsElapsed">0</span> s
+          </div>
+
+          <div class="moves">
+          	<span id="movesNumberDisplay">0</span> Moves
+          </div>
+
+          <div class="matched">
+            <span id="matchedCoupleDisplay">0</span> /8 Matched
+          </div>
+
+            <div id="restartButton" class="restart">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+
+        </section>
+
+        <ul id="deck" class="deck">
+            <li class="card diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card cube">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+    </div>
+
+    <section id="previous-score__container" class="previous-score__container">
+      <h2>Check your previous score!</h2>
+      <table id="previous-score__table" class="previous-score__table">
+        <tr>
+          <th colspan="4">
+            Your previous score
+          </th>
+        </tr>
+        <tr>
+          <th>Match n.
+          </th>
+          <th>Time Elapsed
+          </th>
+          <th>Moves Number
+          </th>
+          <th><i id="star1" class="fa fa-star star"></i> Star Rating <i id="star1" class="fa fa-star star"></i>
+          </th>
+        </tr>
+      </table>
+    </section>
+
+    <footer class="footer__container">
+      <h3>About this page</h3>
+      <div class="footer__about">
+        <p>© 2018 - Written and coded by Sonia Gorla</p>
         </div>
-    </body>
+        <ul class="footer__social-media">
+          <li class="contacts-link"><a href="mailto:soniagorla@msn.com"><i class="fa fa-envelope-o"></i></a></li>
+          <li class="contacts-link"><a href="https://www.facebook.com/sonia.gorla" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li class="contacts-link"><a href="https://www.instagram.com/sonjya00/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+
+    <script src="js/game.js"></script>
+</body>
 </html>
